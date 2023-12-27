@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="back.css">
+    <title>Document</title>
+</head>
+<body>
+  
+   <section></section> 
+   <div class="bord">
+    <h1 class="Welcome">Welcome to a MeMory GaMe Credit for</h1>
+<div class="imgTrack"></div>
+<h3>your name</h3>
+    <input type="text" class="input" id="nameInput">
+    <button class="send" onclick="displayInput()">Send</button>
+    
+    <p id="nameDisplay"></p>
+    
+    <script>
+    function displayInput() {
+      var name = document.getElementById("nameInput").value;
+      document.getElementById("nameDisplay").innerText = name;
+    }
+</script>  
+<h3>good luck</h3>
+  <h1>lives <span class="playerLivesCount"></span></h1>
+  <div class="timer">1:00</div>
+   </div>
+ 
+    <script src="./app.js"  ></script>
+   
+</body>
+</html>

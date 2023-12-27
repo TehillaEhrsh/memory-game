@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: white;
+  
+} 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    /* background-image: linear-gradient(to right top, #c4ee80, #b1ea76, #9ce66d, #84e266, #68de60, #54e06e, #3ae27c, #00e38a, #00eaa9, #07f1c5, #39f6dd, #5ffbf1); */
+    /* background-image:  url(img/sss.jpg ); */
+    background-image: url(https://cdn.pixabay.com/photo/2016/05/22/19/07/background-1409025_640.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+
+section{
+    display: grid;
+    grid-template-columns: repeat(4 , 8rem);
+    grid-template-rows: repeat(4 , 8rem);
+    grid-gap:  3rem 3rem;
+    perspective: 800px;
+
+}
+.card{
+
+position: relative;
+transform-style: preserve-3d;
+transition: transform 2s cubic-bezier(0.17 , 0.88 , 0.32 , 1.23);
+transform: rotateY(0deg);
+
+}
+.face,
+.back{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    pointer-events: none;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.184);
+    gap: 1rem;
+      
+
+
+}
+.back{
+    background-color: rgb(255, 249, 227);
+  backface-visibility: hidden;
+        transition: transform 0.5s; 
+        background-image: url(https://cdn.pixabay.com/photo/2017/01/31/08/28/crescent-2023231_1280.png) ;
+        background-size:  70px auto ;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: rgb(248, 241, 227);
+        -webkit-box-shadow: 0px 0px 50px -2px #adacac; 
+        box-shadow: 0px 0px 50px -2px #c7c7c7a4;
+}
+.toggleCard{
+    transform: rotateY(180deg);
+}
+.face{
+    transform: rotateY(-180eg);
+}
+
+.imgTrack{
+    background-image: url(img/img1.jpg);
+    background-size: 155PX;
+    background-repeat: no-repeat;
+    border-radius: 25px ;
+    
+    padding: 1rem;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+}
+.bord{
+    padding: 3rem;
+    margin: 1rem;
+    width: 400px;
+display: flex;
+flex-direction: column;
+gap: 1rem;
+text-align: center;
+align-items: center;
+}
+.input{
+    border-radius: 5px;
+    background-color: rgb(253, 238, 209);
+    border: 0px;
+    height: 20px;
+}
+.send{
+    width: 80px;
+    border-radius: 5px;
+    height: 30px;
+    border: none;
+
+    
+}
+.send:hover{
+    width: 100px;
+    height: 40px;
+    font-size: medium;
+}
